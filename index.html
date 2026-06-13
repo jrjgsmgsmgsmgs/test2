@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주 카페 트립 | Jeju Cafe Trip</title>
+    <style>
+        :root {
+            --jeju-orange: #FF7F00;
+            --jeju-ocean: #0077BE;
+            --jeju-stone: #4B4B4B;
+            --bg-color: #FAFAFA;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: #333;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--jeju-orange);
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--jeju-stone);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--jeju-ocean);
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            background: linear-gradient(rgba(0, 119, 190, 0.7), rgba(0, 119, 190, 0.7)), url('https://images.unsplash.com/photo-1516834474-48c0abc2a269?auto=format&fit=crop&w=1200&q=80') center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* 카페 리스트 섹션 */
+        .cafe-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--jeju-stone);
+            margin-bottom: 40px;
+        }
+
+        .cafe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .cafe-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .cafe-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .cafe-image {
+            height: 200px;
+            background-color: #ddd;
+            /* 실제 서비스에서는 <img> 태그로 교체 */
+        }
+
+        .image-1 { background: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=500&q=80') center/cover; }
+        .image-2 { background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=500&q=80') center/cover; }
+        .image-3 { background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80') center/cover; }
+
+        .cafe-info {
+            padding: 20px;
+        }
+
+        .cafe-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .tag-ocean { background-color: var(--jeju-ocean); }
+        .tag-farm { background-color: var(--jeju-orange); }
+        .tag-roastery { background-color: var(--jeju-stone); }
+
+        .cafe-title {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .cafe-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: var(--jeju-stone);
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🍊 Jeju Cafe Trip</h1>
+        <nav>
+            <ul>
+                <li><a href="#">오션뷰 카페</a></li>
+                <li><a href="#">감귤밭 카페</a></li>
+                <li><a href="#">제주 시내</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>바람과 커피가 머무는 곳</h2>
+        <p>제주도 곳곳에 숨겨진 보석 같은 카페들을 만나보세요. 탁 트인 바다 전망부터 아늑한 감귤밭 정원까지, 당신의 완벽한 휴식을 위한 공간을 소개합니다.</p>
+    </div>
+
+    <section class="cafe-section">
+        <h3 class="section-title">✨ 이달의 추천 제주 카페</h3>
+        <div class="cafe-grid">
+            
+            <!-- 카페 카드 1 -->
+            <div class="cafe-card">
+                <div class="cafe-image image-1"></div>
+                <div class="cafe-info">
+                    <span class="cafe-tag tag-ocean">애월 오션뷰</span>
+                    <h4 class="cafe-title">카페 파도소리</h4>
+                    <p class="cafe-desc">해안도로에 위치해 있어 투명한 애월 바다를 한눈에 담으며 시그니처 한라봉 에이드를 즐길 수 있습니다.</p>
+                </div>
+            </div>
+
+            <!-- 카페 카드 2 -->
+            <div class="cafe-card">
+                <div class="cafe-image image-2"></div>
+                <div class="cafe-info">
+                    <span class="cafe-tag tag-farm">서귀포 감귤밭</span>
+                    <h4 class="cafe-title">스테이 탠저린</h4>
+                    <p class="cafe-desc">오래된 감귤 창고를 개조한 빈티지한 공간. 겨울에는 직접 귤 따기 체험도 가능한 감성 카페입니다.</p>
+                </div>
+            </div>
+
+            <!-- 카페 카드 3 -->
+            <div class="cafe-card">
+                <div class="cafe-image image-3"></div>
+                <div class="cafe-info">
+                    <span class="cafe-tag tag-roastery">제주시 로스터리</span>
+                    <h4 class="cafe-title">현무암 블렌드</h4>
+                    <p class="cafe-desc">제주 시내에 위치한 스페셜티 커피 전문점. 제주의 현무암을 모티브로 한 흑임자 디저트가 일품입니다.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jeju Cafe Trip. All rights reserved.</p>
+        <p>본 페이지는 데모용으로 제작되었습니다.</p>
+    </footer>
+
+</body>
+</html>
